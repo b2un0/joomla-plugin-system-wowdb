@@ -18,7 +18,7 @@ class plgSystemWoWDB extends JPlugin {
 
 	public function onBeforeRender() {
 		if($this->params->get('jquery')) {
-			JFactory::getDocument()->addScript('//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js');
+			JFactory::getDocument()->addScript('//ajax.googleapis.com/ajax/libs/jquery/' . $this->params->get('jquery_branch') . '/jquery.min.js');
 		}
 		
 		JFactory::getDocument()->addScript('//static-azeroth.cursecdn.com/current/js/syndication/tt.js');

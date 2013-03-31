@@ -21,6 +21,7 @@
 					<option value="1">JYes</option>
 					<option value="0">JNo</option>
 				</field>
+                <field type="text" name="jquery_branch" filter="float" default="1.8" label="jQuery Branch" />
             </fieldset>
         </fields>
     </config>
