@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- @Version $Id$ -->
+<!-- @Version $Id: wowdb.xml 3 2013-03-31 23:43:40Z bRunO $ -->
 <extension version="1.6" type="plugin" group="system" method="upgrade">
     <name>Systen - WoWDB</name>
     <author>Branko Wilhelm</author>
@@ -9,7 +9,7 @@
     <authorEmail>bw@z-index.net</authorEmail>
     <authorUrl>www.z-index.net</authorUrl>
     <version>@SVN_REVISION@</version>
-    <description>include wowhead Javascript</description>
+    <description>include WoWDB Javascript</description>
     <files>
         <filename plugin="wowdb">wowdb.php</filename>
         <filename>index.html</filename>
@@ -21,8 +21,15 @@
 					<option value="1">JYes</option>
 					<option value="0">JNo</option>
 				</field>
+				 <field type="radio" name="jquery_noconflict" default="1" label="jQuery noConflict">
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+				</field>
                 <field type="text" name="jquery_branch" filter="float" default="1.8" label="jQuery Branch" />
             </fieldset>
         </fields>
     </config>
+    <updateservers>
+		<server type="extension" priority="1" name="WoWDB">http://www.z-index.net/en/joomla/wowdb/updatestream.xml</server>
+	</updateservers>
 </extension>
