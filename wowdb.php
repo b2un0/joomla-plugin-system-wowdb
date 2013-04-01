@@ -34,6 +34,8 @@ class plgSystemWoWDB extends JPlugin {
 				JFactory::getDocument()->addScript($jquery);
 				JFactory::getDocument()->addScript('//static-azeroth.cursecdn.com/current/js/syndication/tt.js');
 			}
+		}else{
+			JFactory::getDocument()->addScript('//static-azeroth.cursecdn.com/current/js/syndication/tt.js');
 		}
     }
 }
