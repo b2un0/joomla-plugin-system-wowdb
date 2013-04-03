@@ -14,7 +14,9 @@
  
 defined('_JEXEC') or die;
 
-class plgSystemWoWDB extends JPlugin {
+class plgSystemWowdb extends JPlugin {
+	
+	private $js = '<script src="//static-azeroth.cursecdn.com/current/js/syndication/tt.js" type="text/javascript"></script>';
 
 	public function onBeforeRender() {
 		if (JFactory::getApplication()->isAdmin()) {
@@ -27,7 +29,7 @@ class plgSystemWoWDB extends JPlugin {
 			if($this->params->get('jquery_noconflict', 1)) {
 				$js[] = '<script src="' . $jquery . '" type="text/javascript"></script>';
 				$js[] = '<script>$.noConflict()</script>';
-				$js[] = '<script src="//static-azeroth.cursecdn.com/current/js/syndication/tt.js" type="text/javascript"></script>';
+				$js[] = $this->js;
 				
 				JFactory::getDocument()->addCustomTag(implode(PHP_EOL, $js));
 			}else{
@@ -35,7 +37,7 @@ class plgSystemWoWDB extends JPlugin {
 				JFactory::getDocument()->addScript('//static-azeroth.cursecdn.com/current/js/syndication/tt.js');
 			}
 		}else{
-			JFactory::getDocument()->addScript('//static-azeroth.cursecdn.com/current/js/syndication/tt.js');
+			JFactory::getDocument()->addCustomTag($this->js);
 		}
     }
 }
