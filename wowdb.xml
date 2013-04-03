@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- @Version $Id$ -->
 <extension version="1.6" type="plugin" group="system" method="upgrade">
-    <name>Systen - WoWDB</name>
+    <name>System - WoWDB</name>
     <author>Branko Wilhelm</author>
     <creationDate>Apr 2013</creationDate>
     <copyright>Copyright (C) 2013 Branko Wilhelm. All rights reserved.</copyright>

@@ -9,9 +9,9 @@
  * @package    plg_wowdb
  * @license    GNU General Public License v3
  * @version    $Id$
+ * @todo	   jQuery adaptions for Joomla 3.0
  */
  
-// no direct access
 defined('_JEXEC') or die;
 
 class plgSystemWoWDB extends JPlugin {
