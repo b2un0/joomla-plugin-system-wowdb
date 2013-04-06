@@ -9,35 +9,40 @@
  * @package    plg_wowdb
  * @license    GNU General Public License v3
  * @version    $Id$
- * @todo	   jQuery adaptions for Joomla 3.0
  */
  
 defined('_JEXEC') or die;
 
 class plgSystemWowdb extends JPlugin {
 	
-	private $js = '<script src="//static-azeroth.cursecdn.com/current/js/syndication/tt.js" type="text/javascript"></script>';
-
+	private $js = '//static-azeroth.cursecdn.com/current/js/syndication/tt.js';
+	
 	public function onBeforeRender() {
 		if (JFactory::getApplication()->isAdmin()) {
 			return;
+		}
+		
+		$document = JFactory::getDocument();
+		
+		if(version_compare(JVERSION, '3.0', 'ge')) {
+			JHtml::_('jquery.framework');
+			$document->addScript($this->js);
+			return; 
 		}
 		
 		if($this->params->get('jquery', 1)) {
 			$jquery = '//ajax.googleapis.com/ajax/libs/jquery/' . $this->params->get('jquery_branch') . '/jquery.min.js';
 			
 			if($this->params->get('jquery_noconflict', 1)) {
-				$js[] = '<script src="' . $jquery . '" type="text/javascript"></script>';
-				$js[] = '<script>$.noConflict()</script>';
-				$js[] = $this->js;
+				$jq[] = '<script src="' . $jquery . '" type="text/javascript"></script>';
+				$jq[] = '<script>$.noConflict()</script>';
+				$jq[] = '<script src="' . $this->js . '" type="text/javascript"></script>';
 				
-				JFactory::getDocument()->addCustomTag(implode(PHP_EOL, $js));
+				$document->addCustomTag(implode(PHP_EOL, $js));
 			}else{
-				JFactory::getDocument()->addScript($jquery);
-				JFactory::getDocument()->addScript('//static-azeroth.cursecdn.com/current/js/syndication/tt.js');
+				$document->addScript($jquery);
+				$document->addScript($this->js);
 			}
-		}else{
-			JFactory::getDocument()->addCustomTag($this->js);
 		}
     }
 }
