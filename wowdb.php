@@ -37,8 +37,8 @@ class plgSystemWowdb extends JPlugin {
 				$jq[] = '<script src="' . $jquery . '" type="text/javascript"></script>';
 				$jq[] = '<script>$.noConflict()</script>';
 				$jq[] = '<script src="' . $this->js . '" type="text/javascript"></script>';
-				
-				$document->addCustomTag(implode(PHP_EOL, $js));
+
+				$document->addCustomTag(implode(PHP_EOL, $jq));
 			}else{
 				$document->addScript($jquery);
 				$document->addScript($this->js);
