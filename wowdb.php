@@ -43,6 +43,8 @@ class plgSystemWowdb extends JPlugin {
 				$document->addScript($jquery);
 				$document->addScript($this->js);
 			}
+		}else{
+			$document->addScript($this->js);
 		}
     }
 }
