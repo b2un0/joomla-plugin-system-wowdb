@@ -17,6 +17,10 @@
 	<config>
         <fields name="params">
             <fieldset name="basic">
+                <field type="radio" name="advanced" default="0" label="Advanced Tooltips">
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+				</field>
                 <field type="radio" name="jquery" default="1" label="Include jQuery">
 					<option value="1">JYes</option>
 					<option value="0">JNo</option>

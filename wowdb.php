@@ -17,12 +17,18 @@ class plgSystemWowdb extends JPlugin {
 	
 	private $js = '//static-azeroth.cursecdn.com/current/js/syndication/tt.js';
 	
+	private $advanced = 'var WowDbSettings={AdvancedTooltips:true};';
+	
 	public function onBeforeRender() {
 		if (JFactory::getApplication()->isAdmin()) {
 			return;
 		}
 		
 		$document = JFactory::getDocument();
+		
+		if($this->params->get('advanced')) {
+			$document->addScriptDeclaration($this->advanced);
+		}
 		
 		if(version_compare(JVERSION, '3.0', 'ge')) {
 			JHtml::_('jquery.framework');
