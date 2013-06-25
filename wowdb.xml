@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- @Version $Id$ -->
 <extension version="2.5" type="plugin" group="system" method="upgrade">
     <name>System - WoWDB</name>
     <author>Branko Wilhelm</author>
     <creationDate>Apr 2013</creationDate>
     <copyright>Copyright (C) 2013 Branko Wilhelm. All rights reserved.</copyright>
     <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
-    <authorEmail>bw@z-index.net</authorEmail>
+    <authorEmail>branko.wilhelm@gmail.com</authorEmail>
     <authorUrl>www.z-index.net</authorUrl>
-    <version>@SVN_REVISION@</version>
+    <version>@REVISION@</version>
     <description>include WoWDB Javascript</description>
     <files>
         <filename plugin="wowdb">wowdb.php</filename>
