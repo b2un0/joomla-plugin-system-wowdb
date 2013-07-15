@@ -26,9 +26,9 @@ class plgSystemWowdb extends JPlugin {
 			$document->addScriptDeclaration($this->advanced);
 		}
 		
-		if(version_compare(JVERSION, '3.0', 'ge')) {
+		if(JVersion::isCompatible('3')) {
 			JHtml::_('jquery.framework');
-			$document->addScript($this->js);
+			$document->addScript($this->js, 'text/javascript', false, true);
 			return; 
 		}
 		
@@ -43,10 +43,10 @@ class plgSystemWowdb extends JPlugin {
 				$document->addCustomTag(implode(PHP_EOL, $jq));
 			}else{
 				$document->addScript($jquery);
-				$document->addScript($this->js);
+				$document->addScript($this->js, 'text/javascript', false, true);
 			}
 		}else{
-			$document->addScript($this->js);
+			$document->addScript($this->js, 'text/javascript', false, true);
 		}
     }
 }
