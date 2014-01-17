@@ -1,38 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="2.5" type="plugin" group="system" method="upgrade">
-	<name>System - WoWDB</name>
-	<author>Branko Wilhelm</author>
-	<creationDate>Apr 2013</creationDate>
-	<copyright>Copyright (C) 2013 Branko Wilhelm. All rights reserved.</copyright>
-	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
-	<authorEmail>branko.wilhelm@gmail.com</authorEmail>
-	<authorUrl>www.z-index.net</authorUrl>
-	<version>@REVISION@</version>
-	<description>include WoWDB Javascript</description>
-	<files>
-		<filename plugin="wowdb">wowdb.php</filename>
-		<filename>index.html</filename>
-	</files>
-	<config>
-		<fields name="params">
-			<fieldset name="basic">
-				<field type="radio" class="btn-group" name="advanced" default="0" label="Advanced Tooltips">
-					<option value="1">JYes</option>
-					<option value="0">JNo</option>
-				</field>
-				<field type="radio" class="btn-group" name="jquery" default="1" label="Include jQuery">
-					<option value="1">JYes</option>
-					<option value="0">JNo</option>
-				</field>
-				<field type="radio" class="btn-group" name="jquery_noconflict" default="1" label="jQuery noConflict">
-					<option value="1">JYes</option>
-					<option value="0">JNo</option>
-				</field>
-				<field type="text" name="jquery_branch" filter="float" default="1.8" label="jQuery Branch" />
-			</fieldset>
-		</fields>
-	</config>
-	<updateservers>
-		<server type="collection" priority="1" name="z-index development">http://www.z-index.net/en/extensions.xml</server>
-	</updateservers>
+    <name>System - WoWDB</name>
+    <author>Branko Wilhelm</author>
+    <creationDate>Apr 2013</creationDate>
+    <copyright>Copyright (C) 2013 - 2014 Branko Wilhelm. All rights reserved.</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <authorEmail>branko.wilhelm@gmail.com</authorEmail>
+    <authorUrl>www.z-index.net</authorUrl>
+    <version>@REVISION@</version>
+    <description>include WoWDB Javascript</description>
+    <files>
+        <filename plugin="wowdb">wowdb.php</filename>
+    </files>
+    <updateservers>
+        <server type="collection" priority="1" name="z-index development">http://www.z-index.net/en/extensions.xml</server>
+    </updateservers>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field type="radio" class="btn-group" name="advanced" default="0" label="Advanced Tooltips">
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field>
+                <field type="radio" class="btn-group" name="jquery" default="1" label="Include jQuery">
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field>
+                <field type="radio" class="btn-group" name="jquery_noconflict" default="1" label="jQuery noConflict">
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field>
+                <field type="text" name="jquery_branch" filter="float" default="1.8" label="jQuery Branch" />
+            </fieldset>
+        </fields>
+    </config>
 </extension>
