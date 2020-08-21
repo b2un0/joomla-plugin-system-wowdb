@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<updates>
+    <update>
+        <name>System - WoWDB</name>
+        <element>wowdb</element>
+        <type>plugin</type>
+        <client>0</client>
+        <folder>system</folder>
+        <version>1.0.0</version>
+        <infourl>https://github.com/z-index-net/joomla-plugin-system-wowdb</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">https://github.com/z-index-net/joomla-plugin-system-wowdb/releases/download/1.0.0/joomla-plugin-system-wowdb.zip</downloadurl>
+        </downloads>
+        <targetplatform name="joomla" version="^3\."/>
+    </update>
+</updates>
+

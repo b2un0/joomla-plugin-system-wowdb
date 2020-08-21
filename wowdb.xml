@@ -13,7 +13,7 @@
         <filename plugin="wowdb">wowdb.php</filename>
     </files>
     <updateservers>
-        <server type="collection" priority="1" name="z-index development">http://www.z-index.net/en/extensions.xml</server>
+        <server type="extension" priority="1" name="System - WoWDB">https://raw.githubusercontent.com/z-index-net/joomla-plugin-system-wowdb/master/updatestream.xml</server>
     </updateservers>
     <config>
         <fields name="params">
