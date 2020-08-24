@@ -7,6 +7,8 @@
  * @license    GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 
+use Joomla\CMS\Version;
+
 defined('_JEXEC') or die;
 
 class plgSystemWowdb extends JPlugin
@@ -27,9 +29,9 @@ class plgSystemWowdb extends JPlugin
             $document->addScriptDeclaration($this->advanced);
         }
 
-        if (JVersion::isCompatible('3')) {
+        if (Version::isCompatible('3')) {
             JHtml::_('jquery.framework');
-            $document->addScript($this->js, 'text/javascript', false, true);
+            $document->addScript($this->js, 'text/javascript');
             return;
         }
 
